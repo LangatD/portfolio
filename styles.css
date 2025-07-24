@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+@media (max-width: 768px) {
+    nav ul {
+        display: block;
+        padding: 10px 0;
+    }
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
