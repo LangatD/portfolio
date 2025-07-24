@@ -4,25 +4,13 @@
   box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        display: block;
-        padding: 10px 0;
-    }
-    nav ul li {
-        margin: 10px 0;
-        text-align: center;
-    }
-}
-
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  background: #0a192f; /* Dark blue */
+  background: #0a192f;
   color: #fff;
 }
 
-/* Navbar */
 nav {
   background: #172a45;
   padding: 1rem;
@@ -52,10 +40,9 @@ nav a {
 }
 
 nav a:hover {
-  color: #61dafb; /* React blue */
+  color: #61dafb;
 }
 
-/* Hero Section */
 .hero {
   text-align: center;
   padding: 100px 20px;
@@ -101,7 +88,6 @@ nav a:hover {
   background: #4fa8d5;
 }
 
-/* About Section */
 #about {
   padding: 3rem 20px;
   text-align: center;
@@ -157,7 +143,6 @@ nav a:hover {
 .fa-js-square { color: #f7df1e; }
 .fa-aws { color: #ff9900; }
 
-/* Projects Section */
 #projects {
   padding: 3rem 20px;
 }
@@ -221,7 +206,6 @@ nav a:hover {
   background: #555;
 }
 
-/* Contact Section */
 #contact {
   padding: 3rem 20px;
   text-align: center;
@@ -262,7 +246,6 @@ nav a:hover {
   font-size: 1.5rem;
 }
 
-/* Footer */
 footer {
   background: #172a45;
   text-align: center;
@@ -270,23 +253,51 @@ footer {
   margin-top: 2rem;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #172a45;
+        width: 100%;
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+    .nav-menu.active {
+        display: flex;
+    }
+    .nav-menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    .skill-icons .fab,
+    .skill-icons .fas {
+        font-size: 1.5rem;
+    }
+}
 
-  .hero h1 {
-    font-size: 2rem;
-  }
+.menu-toggle {
+    display: none;
+}
 
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .skill-icons .fab,
-  .skill-icons .fas {
-    font-size: 1.5rem;
-  }
+nav ul {
+    display: flex;
+    gap: 1.5rem;
 }
